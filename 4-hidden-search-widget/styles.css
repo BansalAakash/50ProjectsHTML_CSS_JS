@@ -1,0 +1,45 @@
+body {
+  background-image: linear-gradient(45deg, blue, green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.search {
+  position: relative;
+  height: 50px;
+}
+
+.search .input {
+  background-color: white;
+  border: none;
+
+  padding: 0;
+  height: 50px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+.btn {
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease;
+}
+
+.search.expand .input {
+  width: 200px;
+  padding: 0 15px;
+  font-size: 24px;
+}
+
+.search.expand .btn {
+  transform: translateX(198px);
+}

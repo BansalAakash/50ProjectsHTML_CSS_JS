@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --drank-water-color: rgb(88, 167, 247);
+  --filled-water-font-color: #58a7f7;
+  --glass-border-color: blue;
+}
+
+body {
+  background-color: rgb(70, 155, 230);
+  color: white;
+  font-family: "Mulish", sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body h1 {
+  margin-bottom: 0;
+}
+body p {
+  margin-top: 5px;
+}
+
+.target {
+  position: relative;
+  text-align: center;
+  height: 300px;
+  width: 120px;
+  color: var(--filled-water-font-color);
+  background-color: white;
+  border: 2px solid var(--glass-border-color);
+  margin: 20px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 100% 0%;
+  transition: grid-template-rows 1s;
+}
+
+.remaining {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.remaining h4 {
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.filled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--filled-water-font-color);
+  width: 100%;
+}
+
+.filled h1 {
+  font-weight: 600;
+  color: var(--filled-water-font-color);
+}
+
+.target .filled {
+  color: white;
+  background-color: var(--drank-water-color);
+}
+
+.glasses {
+  margin: 10px;
+  margin-top: 0;
+}
+
+.row {
+  margin: 10px 5px;
+  display: flex;
+}
+
+.glass {
+  cursor: pointer;
+  margin: 0 5px;
+  color: var(--filled-water-font-color);
+  background-color: white;
+  background-size: 100% 0%;
+  border: 2px solid var(--glass-border-color);
+  height: 80px;
+  width: 35px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: small;
+  transition: 0.3s ease;
+}
+
+.glass.drank {
+  background-color: var(--filled-water-font-color);
+  background-size: 100% 100%;
+  color: white;
+}

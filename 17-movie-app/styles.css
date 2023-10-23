@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+:root {
+  --primary-color: #22254b;
+  --secondary-color: #373b69;
+  --lighter-purple: #7378c5;
+}
+
+body {
+  background-color: var(--primary-color);
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--secondary-color);
+  height: 50px;
+}
+
+header .search {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50px;
+  outline: none;
+  background: none;
+  font-size: 1rem;
+  padding: 5px 10px;
+  border: 1px solid var(--primary-color);
+  color: white;
+  font-family: inherit;
+}
+
+header .search::placeholder {
+  color: var(--lighter-purple);
+}
+
+header .search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+main .movie {
+  background-color: var(--secondary-color);
+  width: 300px;
+  margin: 1rem;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+main .movie .image img {
+  width: 100%;
+}
+
+main .movie .movie-info {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+main .movie .movie-info h3 {
+  margin-top: 0;
+}
+
+main .movie .movie-info .rating {
+  background-color: var(--primary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+main .movie .movie-info .rating.green {
+  color: lightgreen;
+}
+
+main .movie .movie-info .rating.orange {
+  color: orange;
+}
+
+main .movie .movie-info .rating.red {
+  color: red;
+}
+
+main .movie .movie-info .overview {
+  color: black;
+  background-color: white;
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.2s ease-in-out;
+}
+
+main .movie:hover .overview {
+  transform: translateY(0);
+}
